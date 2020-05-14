@@ -1,13 +1,10 @@
 $(function() {
-    // $('li').replaceWith('<li>Replaced.</li>');
-    // $('li').replaceWith(function () {
-    //     return '<li>Replaced.</li>';
-    // });
+    // $('li').remove();
+    // $('form').children().not('input:text, textarea, br').remove();
 
-    // const firstListItem = $('li:first');
-    // $('p:first').replaceWith(firstListItem);
+    // const detachedListItem = $('li').detach();
+    // $('#content').append(detachedListItem);
 
-    // $('.red-box, .blue-box').replaceWith('<div class="green-box">Green Replace With</div>');
-
-    // $('<div class="green-box">Green Replace With</div>').replaceAll('.red-box, .blue-box');
+    // $('p:first').empty();
+    // $('.red-box, .green-box, .blue-box').empty();
 });
