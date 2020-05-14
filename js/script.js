@@ -1,10 +1,16 @@
 $(function() {
-    // $('li').remove();
-    // $('form').children().not('input:text, textarea, br').remove();
+    // const specialLink = $('#special-link');
+    // console.log(specialLink.attr('href'));
 
-    // const detachedListItem = $('li').detach();
-    // $('#content').append(detachedListItem);
+    // specialLink.attr('href', 'http://change');
 
-    // $('p:first').empty();
-    // $('.red-box, .green-box, .blue-box').empty();
+    // const checkbox = $('input:checkbox');
+    // console.log(checkbox.prop('checked'));
+    // checkbox.prop('checked', false);
+
+    // const textInput = $('input:text');
+    // console.log(textInput.val());
+
+    const rangeInput = $('input[type="range"]');
+    console.log(rangeInput.val());
 });
