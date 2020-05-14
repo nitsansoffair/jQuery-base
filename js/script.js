@@ -1,5 +1,9 @@
 $(function() {
-  $('.blue-box').slideToggle(2000);
-  $('p').hide();
-  $('p').slideDown(1000);
+    $('.blue-box').animate({
+        'margin-left': '+=200px'
+    }, 1000, "linear");
+
+    $('.blue-box').animate({
+        'margin-left': '-=200px'
+    }, 1000, "linear");
 });
