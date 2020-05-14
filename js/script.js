@@ -8,8 +8,9 @@ $(function() {
     // console.log(checkbox.prop('checked'));
     // checkbox.prop('checked', false);
 
-    // const textInput = $('input:text');
-    // console.log(textInput.val());
+    const textInput = $('input:text');
+    textInput.val('Change');
+    console.log(textInput.val());
 
     const rangeInput = $('input[type="range"]');
     console.log(rangeInput.val());
