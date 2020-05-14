@@ -1,12 +1,14 @@
 $(function() {
-    // $('p').click(function () {
-    //     $(this).slideUp();
-    // });
-    $('#content').append('<p>added.</p>');
-    $('#content').on('click', 'p', function () {
-        $(this).slideUp();
+    $('#btn-click').click({
+        user: 'Peter',
+        domain: 'domain.com'
+    }, function (event) {
+        greetUser(event.data);
     });
-    $('body').on('mouseenter', 'li', function () {
-        $(this).css('color', '#666');
-    });
+
+    function greetUser(userData) {
+        username = userData.user || 'Anonymous';
+        domain = userData.domain || 'Domain';
+        alert(username + ' ' + domain);
+    }
 });
