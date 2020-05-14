@@ -1,23 +1,12 @@
 $(function() {
-    $('html').on('click keydown', logEvent);
-
-    const images = [
-        './images/laptop-mobile_small.jpg',
-        './images/laptop-on-table_small.jpg',
-        './images/people-office-group-team_small.jpg'
-    ];
-    let i = 0;
-    const galleryImage = $('.gallery').find('img');
-    galleryImage.on('click', switchToNextImage);
-
-    function switchToNextImage () {
-        i = (i + 1) % images.length;
-        galleryImage.fadeOut(function () {
-            galleryImage.attr('src', images[i]).fadeIn();
-        });
-    }
+    // $('p').click(function () {
+    //     $(this).slideUp();
+    // });
+    $('#content').append('<p>added.</p>');
+    $('#content').on('click', 'p', function () {
+        $(this).slideUp();
+    });
+    $('body').on('mouseenter', 'li', function () {
+        $(this).css('color', '#666');
+    });
 });
-
-function logEvent () {
-    console.log('keydown');
-}
