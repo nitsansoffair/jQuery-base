@@ -1,16 +1,18 @@
 $(function() {
-    $('.gallery').css('display', 'none'); // .hide();
+    // $('a').addClass('fancy-link');
+    // $('p:first').addClass('large emphasize');
+    //
+    // $('li li').addClass(function (index) {
+    //     $(this).addClass('item-' + index);
+    // });
 
-    const redBox = $('.red-box');
-    console.log(redBox.css('width'));
-    console.log(redBox.width());
+    // $('div').addClass(function (index, currentClass) {
+    //     if (currentClass === "dummy") {
+    //         return 'red-box';
+    //     }
+    // });
 
-    redBox.css('background-color', '#AA7700');
-    $('p').css('font-size', '18px');
-    redBox.css('width', '+=20px');
+    // $('.red-box').removeClass('red-box').addClass('blue-box');
 
-    const properties = $('p').css(['font-size', 'line-height', 'color']);
-    console.log(properties);
-
-    redBox.css('user-select', 'none');
+    $('.dummy').removeClass('dummy').addClass('green-box');
 });
