@@ -1,11 +1,11 @@
 $(function() {
-    const firstPar = $('p:first');
-    console.log(firstPar.text());
-    console.log(firstPar.html());
+    $('#btn-click').click(function (e) {
+        console.log(e);
+        alert('click')
+    });
 
-    console.log($('p').html());
-    firstPar.text('<strong>Hello</strong>');
-
-    firstPar.html('<strong>Hello</strong> World!');
-    firstPar.html(firstPar.html() + ' appended.');
+    $('.red-box').click(function () {
+        $(this).fadeTo(500, 0.5);
+    });
+    $('.red-box').click();
 });
