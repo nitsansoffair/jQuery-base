@@ -1,17 +1,13 @@
 $(function() {
-    // $('ul ul:first').append('<li>last</li>');
-    // $('<li>last</li>').appendTo($('ul ul:first'));
-
-    // $('ul ul:first').prepend('<li>prepend</li>');
-    // $('<li>prepend</li>').prependTo($('ul ul:first'));
-    // $('<h4>prepend</h4>').prependTo('#content');
-
-    // $('.red-box').after('<div class="red-box">Red After</div>');
-    // $('.blue-box').before('<div class="blue-box">Blue Before</div>');
-
-    // $('.blue-box').before(function () {
-    //     return '<div class="blue-box">Blue 2</div>';
+    // $('li').replaceWith('<li>Replaced.</li>');
+    // $('li').replaceWith(function () {
+    //     return '<li>Replaced.</li>';
     // });
 
-    $('p').after($('#list'));
+    // const firstListItem = $('li:first');
+    // $('p:first').replaceWith(firstListItem);
+
+    // $('.red-box, .blue-box').replaceWith('<div class="green-box">Green Replace With</div>');
+
+    // $('<div class="green-box">Green Replace With</div>').replaceAll('.red-box, .blue-box');
 });
