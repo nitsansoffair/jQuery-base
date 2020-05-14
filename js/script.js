@@ -1,7 +1,5 @@
 $(function() {
-    $('html').on('click keydown', function () {
-        console.log('keydown');
-    });
+    $('html').on('click keydown', logEvent);
 
     const images = [
         './images/laptop-mobile_small.jpg',
@@ -9,10 +7,17 @@ $(function() {
         './images/people-office-group-team_small.jpg'
     ];
     let i = 0;
-    $('.gallery').find('img').on('click', function () {
+    const galleryImage = $('.gallery').find('img');
+    galleryImage.on('click', switchToNextImage);
+
+    function switchToNextImage () {
         i = (i + 1) % images.length;
-        $(this).fadeOut(function () {
-            $(this).attr('src', images[i]).fadeIn();
+        galleryImage.fadeOut(function () {
+            galleryImage.attr('src', images[i]).fadeIn();
         });
-    });
+    }
 });
+
+function logEvent () {
+    console.log('keydown');
+}
