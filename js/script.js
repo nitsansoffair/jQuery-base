@@ -1,11 +1,9 @@
 $(function() {
-    $('#btn-click').click(function (e) {
-        console.log(e);
-        alert('click')
+    $('#btn-hover').hover(function () {
+        alert('Hover');
     });
 
-    $('.red-box').click(function () {
-        $(this).fadeTo(500, 0.5);
+    $('.green-box').hover(function () {
+        $(this).text('Hover');
     });
-    $('.red-box').click();
 });
