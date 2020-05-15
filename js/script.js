@@ -1,9 +1,20 @@
 $(function() {
-    $('html').keydown(function (event) {
-        if (event.which === 39) {
-            $('.blue-box').stop().animate({
-                'margin-left': '+=10px'
-            }, 50);
+    const inputFields = $('input:text, input:password, textarea');
+    inputFields.focus(function () {
+        $(this).css('box-shadow', '0 0 4px #666');
+    });
+
+    inputFields.blur(function () {
+        $(this).css('box-shadow', 'none');
+    });
+
+    $('#name').blur(function () {
+        const text = $(this).val();
+
+        if (text.length < 3) {
+            $(this).css('box-shadow', '0 0 4px #811');
+        } else {
+            $(this).css('box-shadow', '0 0 4px #666');
         }
     });
 });
