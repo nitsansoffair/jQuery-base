@@ -1,11 +1,21 @@
 $(function () {
-    $('#code').load('./js/script.js');
+    const flickrApiUrl = 'https://www.flickr.com/services/feeds/photos_public.gne?jsoncallback=?';
 
-    $('#code').load('./js/script.js', function (response, status) {
-        if (status === 'error') {
-            alert('error');
-        }
+    $.getJSON(flickrApiUrl, {
+        tags: 'sun, beach',
+        tagmode: 'any',
+        format: 'json'
+    })
+        .done(function (data) {
+            $.each(data.items, function (index, value) {
+                $('<img>').attr('src', value.media.m).appendTo('#flickr');
 
-        console.log(response);
-    });
+                if (index === 4) {
+                    return false;
+                }
+            });
+        })
+        .fail(function () {
+            alert('fail');
+        });
 });
