@@ -1,21 +1,18 @@
 $(function () {
-    const flickrApiUrl = 'https://www.flickr.com/services/feeds/photos_public.gne?jsoncallback=?';
+    const pokeapiUrl = 'https://pokeapi.co/api/v2/generation/1';
 
-    $.getJSON(flickrApiUrl, {
-        tags: 'sun, beach',
-        tagmode: 'any',
-        format: 'json'
-    })
+    $.getJSON(pokeapiUrl)
         .done(function (data) {
-            $.each(data.items, function (index, value) {
-                $('<img>').attr('src', value.media.m).appendTo('#flickr');
-
-                if (index === 4) {
-                    return false;
-                }
+            $.each(data.pokemon_species, function (index, pokemon) {
+                const name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+                const par = $('<p>').html("Pokemon " + (index + 1) + " is " + name);
+                par.appendTo('#pokemon');
             });
         })
         .fail(function () {
-            alert('fail');
+            console.log('fail');
+        })
+        .always(function () {
+            console.log('Pokemon');
         });
 });
