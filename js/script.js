@@ -1,15 +1,10 @@
 $(function() {
-    $('#checkbox').change(function () {
-        const isChecked = $(this).is(':checked');
-        if (isChecked) {
-            $(this).add('label[for="cb"]').css('box-shadow', '0 0 4px #181');
-        } else {
-            $(this).add('label[for="cb"]').css('box-shadow', '0 0 4px #811');
-        }
-    });
+    $('#form').submit(function (event) {
+        const textarea = $('#message');
 
-    $('#selection').change(function () {
-        const selectedOption = $(this).find(':selected').text();
-        alert(selectedOption);
+        if (textarea.val().trim() === '') {
+            textarea.css('box-shadow', '0 0 4px #881');
+            event.preventDefault();
+        } else {}
     });
 });
